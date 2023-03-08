@@ -1,16 +1,16 @@
 message = "Be sure to drink your ovaltine."
-shift = 1
+code_shift = 5
+num_cycle = Array(48..57).cycle(1)
+caps_cycle = Array(65..90).cycle(1)
+lower_cycle = Array(97..122).cycle(1)
 
-p message_array = message.split("")
+p message_array = message.bytes
 
-def get_character_values(message_array, shift)
-  coded_message = []
-  message_array.bytes do |num|
-    if num.between?(48, 57) || num.between?(65, 90) || num.between?(97, 122) 
-      coded_message.push(num + shift)
-    elsif
-      coded_message.push(num)
-    end 
+shifted_values = message_array.map do |num| 
+  if num_cycle.include?(num) || caps_cycle.include?(num) || lower_cycle.include?(num)
+   p num = num + code_shift
+  else num = num
   end
-  p coded_message
 end
+
+p shifted_values
