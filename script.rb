@@ -3,7 +3,7 @@ shift = 1
 
 p message_array = message.split("")
 
-def secret_message(message_array, shift)
+def get_character_values(message_array, shift)
   coded_message = []
   message_array.bytes do |num|
     if num.between?(48, 57) || num.between?(65, 90) || num.between?(97, 122) 
@@ -14,5 +14,3 @@ def secret_message(message_array, shift)
   end
   p coded_message
 end
-
-secret_message(message, shift)
