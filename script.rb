@@ -5,7 +5,7 @@ p message_array = message.split("")
 
 def secret_message(message_array, shift)
   message_array.bytes do |num|
-    if num.between?(65, 90) || num.between?(97, 122) 
+    if num.between?(48, 57) || num.between?(65, 90) || num.between?(97, 122) 
       puts (num + shift).chr
     elsif
       puts num.chr
