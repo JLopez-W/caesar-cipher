@@ -1,6 +1,6 @@
-message = "0AAa0"
+message = "Be sure to drink your ovaltine."
 message_array = message.bytes
-code_shift = 3
+code_shift = 12
 num_array = Array(48..57).cycle
 caps_array = Array(65..90).cycle
 lower_array = Array(97..122).cycle
@@ -8,8 +8,6 @@ lower_array = Array(97..122).cycle
 new_nums = []
 new_caps = []
 new_lower = []
-
-p message_array
 
 get_new_nums = message_array.each do |item| 
   if item.between?(48, 57)
@@ -56,12 +54,9 @@ get_new_lower = message_array.each do |item|
   end
 end
 
-
 get_new_nums
 get_new_caps
 get_new_lower
- 
- p new_nums
- p new_caps
- p message_array 
-  
+
+secret_message = message_array.map { |index| index.chr }.join("")
+p "The secret message is: '#{secret_message}' "
