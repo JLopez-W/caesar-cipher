@@ -1,6 +1,6 @@
 message = "Be sure to drink your Ovaltine."
 message_array = message.bytes
-code_shift = 1
+code_shift = 12
 lower_array = Array(97..122).cycle
 caps_array = Array(65..90).cycle
 num_array = Array(48..57).cycle
