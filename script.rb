@@ -50,4 +50,4 @@ message_array.map { |item|
 
 message_array.replace(new_message_values)
 secret_message = message_array.map { |value| value.chr }.join('')
-p "The secret message is ...  '#{secret_message}' "
+puts "\nThe secret message is ...  \n\n'#{secret_message}'"
