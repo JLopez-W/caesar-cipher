@@ -17,7 +17,7 @@ message_array.map { |item|
      array = num_array  
   end
    
-  if (item.between?(97, 122) || item.between?(65, 90) || item.between?(48, 57))
+  if item.between?(97, 122) || item.between?(65, 90) || item.between?(48, 57)
     index = array.find_index(item)
     shift_number = index + code_shift + 1
     shift_number.times do |i|
